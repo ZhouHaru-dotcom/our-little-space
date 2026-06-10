@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>First Monthsary</title>
+<title>Open Letter</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
 
@@ -16,45 +16,85 @@ padding:0;
 box-sizing:border-box;
 }
 
+html,
 body{
-padding:30px;
-font-family:'Cormorant Garamond',serif;
+background:#000;
 color:white;
-min-height:100vh;
+min-height:100%;
+font-family:'Poppins',sans-serif;
+overflow-x:hidden;
+}
+
+/* Envelope Screen */
+
+#envelope-screen{
+position:fixed;
+inset:0;
+background:#000;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+z-index:100;
+transition:1s;
+}
+
+.envelope{
+width:260px;
+height:170px;
 position:relative;
+cursor:pointer;
+transition:.4s;
 }
 
-body::before{
-content:"";
-position:fixed;
-inset:0;
-background:url('background.jpg') center/cover no-repeat;
-filter:blur(15px);
-z-index:-2;
+.envelope:hover{
+transform:translateY(-8px);
 }
 
-body::after{
-content:"";
-position:fixed;
-inset:0;
-background:rgba(0,0,0,.85);
-z-index:-1;
+.envelope-body{
+position:absolute;
+width:100%;
+height:100%;
+background:#111;
+border:1px solid #333;
+border-radius:8px;
+}
+
+.envelope-flap{
+position:absolute;
+top:0;
+left:0;
+width:0;
+height:0;
+border-left:130px solid transparent;
+border-right:130px solid transparent;
+border-top:90px solid #1d1d1d;
+transform-origin:top;
+}
+
+.open-text{
+margin-top:30px;
+opacity:.7;
+letter-spacing:2px;
+}
+
+/* Hidden Letter */
+
+#letter-page{
+opacity:0;
+pointer-events:none;
+transition:1s;
+padding:30px;
 }
 
 .letter{
 max-width:900px;
 margin:auto;
-background:rgba(0,0,0,.92);
-padding:50px;
+background:#050505;
 border-radius:24px;
-}
-
-.back{
-display:inline-block;
-margin-bottom:40px;
-color:white;
-text-decoration:none;
-opacity:.6;
+padding:50px;
+border:1px solid #1a1a1a;
+box-shadow:0 0 30px rgba(255,255,255,.03);
 }
 
 .date{
@@ -63,20 +103,35 @@ margin-bottom:20px;
 }
 
 .title{
+font-family:'Cormorant Garamond',serif;
 font-size:50px;
-margin-bottom:40px;
+margin-bottom:35px;
 }
 
 .content{
+font-family:'Cormorant Garamond',serif;
 font-size:28px;
-line-height:1.8;
+line-height:1.9;
 white-space:pre-wrap;
 }
 
 .signature{
 margin-top:60px;
 text-align:right;
-font-size:32px;
+font-family:'Cormorant Garamond',serif;
+font-size:34px;
+}
+
+.back{
+display:inline-block;
+margin-bottom:35px;
+color:white;
+text-decoration:none;
+opacity:.6;
+}
+
+.back:hover{
+opacity:1;
 }
 
 @media(max-width:700px){
@@ -86,11 +141,26 @@ padding:25px;
 }
 
 .title{
-font-size:38px;
+font-size:36px;
 }
 
 .content{
-font-size:23px;
+font-size:22px;
+}
+
+.signature{
+font-size:28px;
+}
+
+.envelope{
+width:220px;
+height:145px;
+}
+
+.envelope-flap{
+border-left:110px solid transparent;
+border-right:110px solid transparent;
+border-top:75px solid #1d1d1d;
 }
 
 }
@@ -99,6 +169,27 @@ font-size:23px;
 </head>
 <body>
 
+<!-- Envelope -->
+
+<div id="envelope-screen">
+
+<div class="envelope" onclick="openLetter()">
+
+<div class="envelope-body"></div>
+<div class="envelope-flap"></div>
+
+</div>
+
+<div class="open-text">
+A Letter For You My Love ❤︎
+</div>
+
+</div>
+
+<!-- Letter -->
+
+<div id="letter-page">
+
 <div class="letter">
 
 <a href="index.html" class="back">
@@ -106,16 +197,16 @@ font-size:23px;
 </a>
 
 <div class="date">
-May 14 2026
+June 10, 2026
 </div>
 
 <div class="title">
-First Monthsary ❤︎
+First Monthsary
 </div>
 
 <div class="content">
 
-My Love ❤︎
+My Wife ❤︎
 
 On our first monthsary I am so happy because i have you in my life.
 I want to be your husband in the future and make a family with you.
@@ -130,6 +221,24 @@ Happy First Monthsary My dear Beautiful Wife ❤︎
 </div>
 
 </div>
+
+</div>
+
+<script>
+
+function openLetter(){
+
+document.getElementById("envelope-screen").style.opacity="0";
+
+setTimeout(()=>{
+document.getElementById("envelope-screen").style.display="none";
+document.getElementById("letter-page").style.opacity="1";
+document.getElementById("letter-page").style.pointerEvents="auto";
+},800);
+
+}
+
+</script>
 
 </body>
 </html>
