@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Open Letter</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html,
+body{
+background:#000;
+color:white;
+min-height:100%;
+font-family:'Playfair Display',sans-serif;
+overflow-x:hidden;
+}
+
+/* Envelope Screen */
+
+#envelope-screen{
+position:fixed;
+inset:0;
+background:#000;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+z-index:100;
+transition:1s;
+}
+
+.envelope{
+width:260px;
+height:170px;
+position:relative;
+cursor:pointer;
+transition:.4s;
+}
+
+.envelope:hover{
+transform:translateY(-8px);
+}
+
+.envelope-body{
+position:absolute;
+width:100%;
+height:100%;
+background:#111;
+border:1px solid #333;
+border-radius:8px;
+}
+
+.envelope-flap{
+position:absolute;
+top:0;
+left:0;
+width:0;
+height:0;
+border-left:130px solid transparent;
+border-right:130px solid transparent;
+border-top:90px solid #1d1d1d;
+transform-origin:top;
+}
+
+.open-text{
+margin-top:30px;
+opacity:.7;
+letter-spacing:2px;
+}
+
+/* Hidden Letter */
+
+#letter-page{
+opacity:0;
+pointer-events:none;
+transition:1s;
+padding:30px;
+}
+
+.letter{
+max-width:900px;
+margin:auto;
+background:#050505;
+border-radius:24px;
+padding:50px;
+border:1px solid #1a1a1a;
+box-shadow:0 0 30px rgba(255,255,255,.03);
+}
+
+.date{
+opacity:.5;
+margin-bottom:20px;
+}
+
+.title{
+font-family:'Playfair Display',serif;
+font-size:20px;
+margin-bottom:19px;
+}
+
+.content{
+font-family:'Playfair Display', serif;
+font-size:15px;
+font-style:italic;
+font-weight:400;
+line-height:1.7;
+white-space:pre-wrap;
+}
+
+.signature{
+margin-top:40px;
+text-align:right;
+font-family:'Playfair Display',serif;
+font-size:13px;
+}
+
+.back{
+display:inline-block;
+margin-bottom:30px;
+color:white;
+text-decoration:none;
+opacity:.6;
+}
+
+.back:hover{
+opacity:1;
+}
+
+@media(max-width:700px){
+
+.letter{
+padding:25px;
+}
+
+.title{
+font-size:20px;
+}
+
+.content{
+font-size:15px;
+}
+
+.signature{
+font-size:13px;
+}
+
+.envelope{
+width:220px;
+height:145px;
+}
+
+.envelope-flap{
+border-left:110px solid transparent;
+border-right:110px solid transparent;
+border-top:75px solid #1d1d1d;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<!-- Envelope -->
+
+<div id="envelope-screen">
+
+<div class="envelope" onclick="openLetter()">
+
+<div class="envelope-body"></div>
+<div class="envelope-flap"></div>
+
+</div>
+
+<div class="open-text">
+A Letter For You My Love ❤︎
+</div>
+
+</div>
+
+<!-- Letter -->
+
+<div id="letter-page">
+
+<div class="letter">
+
+<a href="index.html" class="back">
+«« Back Home
+</a>
+
+<div class="date">
+July 14 2026
+</div>
+
+<div class="title">
+Third Monthsary
+</div>
+
+<div class="content">
+My Beautiful Wife, Angel Yves❤︎
+
+Hubby, thank you for your understanding for me.
+Thank you so much for loving me❤︎
+You made me feel safe, everytime I'm talking to you i feel peace. I am so sorry if sometimes i cause you stress, I am so sorry that sometimes i dissapoints you.. I didn't mean you to feel stress and dissapointed in me. i was just confused to what to do po, I'm still changing my bad habits for you and I'm still learning to be positive for you.. so I'm so sorry whenever I'm causing you stress.
+And thank you for teaching me what to do, thank you for guiding me. I love you so much, more than anything, anyone else in the world. You are my world, my sun, my light, my star, my life.. you are my wife, one and only.. i promise with sincerity that i will never ever betray you and break your trust. If i ever love another girl, that girl will run into your arms with a smile as she calls you "Mommy❤︎"
+
+You are more than what I've ever wished for❤︎
+I will forever cherish you like a treasure❤︎
+I will forever value you like a diamond❤︎
+I will forever be proud of all your achievements❤︎
+I will forever be by your side❤︎
+I will forever be your Number One supporter❤︎
+I will forever care for you❤︎
+I will forever hear you out❤︎
+I will forever love you❤︎
+
+I LOVE YOU MORE THAN THE WORDS CAN,
+EXPRESS, MORE THAN YOU CAN EVER IMAGINE!
+
+I love you so much, Angel Yves Andaya❤︎
+Soon we'll share the same last names❤︎
+
+HAPPY THIRD MONTHSARY❤︎
+MY BEAUTIFUL WIFE❤︎
+
+Mwuahhh❤︎
+</div>
+
+<div class="signature">
+— Your husband, Ace
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function openLetter(){
+
+document.getElementById("envelope-screen").style.opacity="0";
+
+setTimeout(()=>{
+document.getElementById("envelope-screen").style.display="none";
+document.getElementById("letter-page").style.opacity="1";
+document.getElementById("letter-page").style.pointerEvents="auto";
+},800);
+
+}
+
+</script>
+
+</body>
+</html>
