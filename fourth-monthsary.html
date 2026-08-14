@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Open Letter</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html,
+body{
+background:#000;
+color:white;
+min-height:100%;
+font-family:'Playfair Display',sans-serif;
+overflow-x:hidden;
+}
+
+/* Envelope Screen */
+
+#envelope-screen{
+position:fixed;
+inset:0;
+background:#000;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+z-index:100;
+transition:1s;
+}
+
+.envelope{
+width:260px;
+height:170px;
+position:relative;
+cursor:pointer;
+transition:.4s;
+}
+
+.envelope:hover{
+transform:translateY(-8px);
+}
+
+.envelope-body{
+position:absolute;
+width:100%;
+height:100%;
+background:#111;
+border:1px solid #333;
+border-radius:8px;
+}
+
+.envelope-flap{
+position:absolute;
+top:0;
+left:0;
+width:0;
+height:0;
+border-left:130px solid transparent;
+border-right:130px solid transparent;
+border-top:90px solid #1d1d1d;
+transform-origin:top;
+}
+
+.open-text{
+margin-top:30px;
+opacity:.7;
+letter-spacing:2px;
+}
+
+/* Hidden Letter */
+
+#letter-page{
+opacity:0;
+pointer-events:none;
+transition:1s;
+padding:30px;
+}
+
+.letter{
+max-width:900px;
+margin:auto;
+background:#050505;
+border-radius:24px;
+padding:50px;
+border:1px solid #1a1a1a;
+box-shadow:0 0 30px rgba(255,255,255,.03);
+}
+
+.date{
+font-family:Georgia, "Times New Roman", serif;
+opacity:.5;
+margin-bottom:20px;
+text-align:rightr;
+}
+
+.title{
+font-family:Georgia, "Times New Roman", serif;
+font-size:20px;
+margin-bottom:10px;
+text-align:center;
+}
+
+.content{
+font-family:Georgia, "Times New Roman", serif;
+font-size:15px;
+font-style:italic;
+font-weight:500;
+line-height:1.8;
+white-space:pre-wrap;
+}
+
+.signature{
+margin-top:35px;
+text-align:right;
+font-family:Georgia, "Times New Roman", serif;
+font-size:13px;
+}
+
+.back{
+display:inline-block;
+margin-bottom:30px;
+color:white;
+text-decoration:none;
+opacity:.6;
+}
+
+.back:hover{
+opacity:1;
+}
+
+@media(max-width:700px){
+
+.letter{
+padding:25px;
+}
+
+.title{
+font-size:20px;
+}
+
+.content{
+font-size:15px;
+}
+
+.signature{
+font-size:13px;
+}
+
+.envelope{
+width:220px;
+height:145px;
+}
+
+.envelope-flap{
+border-left:110px solid transparent;
+border-right:110px solid transparent;
+border-top:75px solid #1d1d1d;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<!-- Envelope -->
+
+<div id="envelope-screen">
+
+<div class="envelope" onclick="openLetter()">
+
+<div class="envelope-body"></div>
+<div class="envelope-flap"></div>
+
+</div>
+
+<div class="open-text">
+A Letter For You My Love ❤︎
+</div>
+
+</div>
+
+<!-- Letter -->
+
+<div id="letter-page">
+
+<div class="letter">
+
+<a href="index.html" class="back">
+«« Back Home
+</a>
+
+<div class="date">
+August 14 2026
+</div>
+
+<div class="title">
+ꨄ ❀ Fourth Monthsary ❀ ꨄ
+</div>
+
+<div class="content">
+To my beautiful wife, ❀ Angel Yves ❤︎
+
+In this letter i just wanna sincerely apologize..
+I'm sorry for the last month we had so many misunderstandings that turns into an argument.
+
+I'm still in the process of trying to be better for us
+I'm still learning my ways.. so I'm really and truly sorry for every arguments..
+
+In this month, August I'm doing my best not to have any arguments, I'm doing my best to be understanding in every situations as to make up for what happened last month.
+
+My Wife I love you more than anything
+More than life itself ꨄ
+
+You want me to love myself, prioritize myself and I'm doing it, trying to do it, but please understand something..
+
+You will always be my first priority and i love the most amd more than anything including myself.
+
+And about your insecurities? please don't be.
+
+You have the beauty of a fantasy world.
+You have the presence of peaceful nature.
+You're like a spring season blooming the world of our own ❀
+
+❀ You're so beautiful in every way and aspect ❀
+❀ Your figure so beautiful in every part of you ❀
+
+I love you so deeply, so truthfully, & so sincerely.
+
+Unloving you is just so stupid to even imagine 
+Leaving you is so blind of me, I'd rather die
+Replacing you is the greatest mistake i oath to never even think about.
+Betraying you is like proving I'm no different than a lust hungry man.
+
+Because...
+
+Saying "i love you" would be an understatement.
+I am dangerously inlove with you.
+A love that unravels my composure and steals the air from my lungs in your absence.
+You're not merely someone i adore, you are the gravity that keeps me tethered, the perniciously silent ache in my chest when you're gone.
+The reason silent feels too loud and nights feels incomplete. To love you is to surrender willingly, to breathe only when you are near, and to suffocate softly when you are not. You are the reason of the calmness i bare, the reason of each step i take, and the reason i am trying to change.
+
+Saying "I'm all yours" feels too shallow.
+I have committed myself into your soul, reserve my whole being to your hands.
+A heart that whispers your name silently in the wind, a body that craves nothing else but your warmth. My heart only breathes in your presence.
+Eyes that only settles in your elegance.
+
+I could see the beauty of the world in your eyes.
+I could hear the calm melody in your voice.
+I could feel the peace in your presence.
+
+Distance did not separate us, it tests our bond, it give us strength through the challenges in our way. It didn't block our way, it give us path to reunite once we accomplished our mission and come back to what we call home, and that home is us. We are each other's home.
+
+So remember, You will always have me, run to, to cry on to, and to hear and see you.
+
+❀ I will always love you until my lungs give out
+
+❀ You are so much beautiful than you can see ❀
+❀ You are so much prettier than you can think ❀
+
+ꨄ❀ You are more than I've ever dreamed of ❀ꨄ
+ꨄ❀ You are so much more than enough ❀ꨄ
+
+ꨄ❀ You Are Perfect ❀ꨄ
+
+ꨄ❀ I LOVE YOU SO SO SO SO MUCH MORE ❀ꨄ
+ꨄ❀ My Dear Sweetest Most Beautiful Wifey ❀ꨄ
+
+ꨄ❀ Happy fourth monthsary honey ❀ꨄ
+</div>
+
+<div class="signature">
+— ꨄ Your husband, Ace ꨄ
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function openLetter(){
+
+document.getElementById("envelope-screen").style.opacity="0";
+
+setTimeout(()=>{
+document.getElementById("envelope-screen").style.display="none";
+document.getElementById("letter-page").style.opacity="1";
+document.getElementById("letter-page").style.pointerEvents="auto";
+},800);
+
+}
+
+</script>
+
+</body>
+  </html>
