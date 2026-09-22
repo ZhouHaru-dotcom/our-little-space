@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Open Letter</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html,
+body{
+background:#000;
+color:white;
+min-height:100%;
+font-family:'Playfair Display',sans-serif;
+overflow-x:hidden;
+}
+
+/* Envelope Screen */
+
+#envelope-screen{
+position:fixed;
+inset:0;
+background:#000;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+z-index:100;
+transition:1s;
+}
+
+.envelope{
+width:260px;
+height:170px;
+position:relative;
+cursor:pointer;
+transition:.4s;
+}
+
+.envelope:hover{
+transform:translateY(-8px);
+}
+
+.envelope-body{
+position:absolute;
+width:100%;
+height:100%;
+background:#111;
+border:1px solid #333;
+border-radius:8px;
+}
+
+.envelope-flap{
+position:absolute;
+top:0;
+left:0;
+width:0;
+height:0;
+border-left:130px solid transparent;
+border-right:130px solid transparent;
+border-top:90px solid #1d1d1d;
+transform-origin:top;
+}
+
+.open-text{
+margin-top:30px;
+opacity:.7;
+letter-spacing:2px;
+}
+
+/* Hidden Letter */
+
+#letter-page{
+opacity:0;
+pointer-events:none;
+transition:1s;
+padding:30px;
+}
+
+.letter{
+max-width:900px;
+margin:auto;
+background:#050505;
+border-radius:24px;
+padding:50px;
+border:1px solid #1a1a1a;
+box-shadow:0 0 30px rgba(255,255,255,.03);
+}
+
+.date{
+font-family:Georgia, "Times New Roman", serif;
+opacity:.5;
+margin-bottom:20px;
+text-align:rightr;
+}
+
+.title{
+font-family:Georgia, "Times New Roman", serif;
+font-size:20px;
+margin-bottom:10px;
+text-align:center;
+}
+
+.content{
+font-family:Georgia, "Times New Roman", serif;
+font-size:15px;
+font-style:italic;
+font-weight:500;
+line-height:1.8;
+white-space:pre-wrap;
+}
+
+.signature{
+margin-top:35px;
+text-align:right;
+font-family:Georgia, "Times New Roman", serif;
+font-size:13px;
+}
+
+.back{
+display:inline-block;
+margin-bottom:30px;
+color:white;
+text-decoration:none;
+opacity:.6;
+}
+
+.back:hover{
+opacity:1;
+}
+
+@media(max-width:700px){
+
+.letter{
+padding:25px;
+}
+
+.title{
+font-size:20px;
+}
+
+.content{
+font-size:15px;
+}
+
+.signature{
+font-size:13px;
+}
+
+.envelope{
+width:220px;
+height:145px;
+}
+
+.envelope-flap{
+border-left:110px solid transparent;
+border-right:110px solid transparent;
+border-top:75px solid #1d1d1d;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<!-- Envelope -->
+
+<div id="envelope-screen">
+
+<div class="envelope" onclick="openLetter()">
+
+<div class="envelope-body"></div>
+<div class="envelope-flap"></div>
+
+</div>
+
+<div class="open-text">
+A Letter For You My Love ❤︎
+</div>
+
+</div>
+
+<!-- Letter -->
+
+<div id="letter-page">
+
+<div class="letter">
+
+<a href="index.html" class="back">
+«« Back Home
+</a>
+
+<div class="date">
+Sept-14-2026
+</div>
+
+<div class="title">
+❀ Fifth Monthsary ❀
+</div>
+
+<div class="content">
+To my beautiful wife, ❀ Angel Yves ❤︎
+
+My Sincere apologies:
+
+Dear wife:
+I hereby state myself to apologize for all the wrongs I've done.. for all the pain I've caused you. I'm so sorry that most of the time i was hard deal with, I'm sorry for not treating you better, I'm sorry for causing you stress, I'm sorry for doing something so selfish.. I'm sorry my baby for all the words I've said that hurts youI'm deeply in regret my love, I'm deeply sorry for all of it. I'm so sorry...
+
+═══════════════════════════════════════
+
+Dear wife:
+My wife.. i am so sorry. I love you..
+I knew i messed up i knew I'm wrong. I'm sorry..
+I love you so much.. just like in the beginning. That never changed.. I'm grateful for 5 months you stayed.. I'm grateful you've let me see this thing so called life.. I'm grateful for the moments you've made me happy. I'm grateful for your effort for me.. I'm grateful for your love for me.. I'm grateful you let me feel love even if it was just temporary.
+Thank you so much for being the best that ever happened to me..
+
+Your smile always makes my day better..
+Seeing you makes all my problem 
+disappear.. I wish to offer my life to
+yours better.. i wish you better because
+I love you.. I'm sorry if I'm no longer your
+safe place.. sorry.. i wish your life better.
+i wish you luck and good things.. even if
+I'd suffer. I wish you've met a better
+and perfect person for you that treats
+you the way you deserve and right..
+
+You're so beautiful like a star that I'm
+meant to only admire from afar.. ig..
+Your presence's like a nature I'm not
+allowed to set foot in.. Your eyes..
+looks like the universe.. i love you.
+I love you.. only you. just.. you...
+
+I miss you.. My wife, My dear, My love, Hubby, wifey, honey,, My home, and My world.. the names I've called you.. it's so sweet to me yet now it still sweet.. but sweetly killing me inside. I wish you'd come back.. i wish i could turn back the time and fix everything.. I'm sorry.. hahaha.. I'm such a coward. I'm such a fool. well i deserve to suffer like this.. it's nothing right? I'm a man after all.. even if I'm already utterly exhausted... tired.. I'd fix it all.. time by time piece by piece. even if that's the last thing I'd do.. just to feel it again one more time.. 
+
+ꨄ❀Happy Fifth Monthsary❀ꨄ
+
+Thank you... For Loving me.
+</div>
+
+<div class="signature">
+— ꨄ Your husband, Ace ꨄ
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function openLetter(){
+
+document.getElementById("envelope-screen").style.opacity="0";
+
+setTimeout(()=>{
+document.getElementById("envelope-screen").style.display="none";
+document.getElementById("letter-page").style.opacity="1";
+document.getElementById("letter-page").style.pointerEvents="auto";
+},800);
+
+}
+
+</script>
+
+</body>
+</html>
