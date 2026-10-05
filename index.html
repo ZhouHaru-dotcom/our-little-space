@@ -96,6 +96,20 @@ opacity:.4;
 font-size:12px;
 }
 
+/* Locked Sixth Monthsary */
+
+.locked-card{
+cursor:not-allowed;
+opacity:.45;
+border-color:#111;
+}
+
+.locked-card:hover{
+transform:none;
+border-color:#111;
+box-shadow:none;
+}
+
 </style>
 </head>
 <body>
@@ -135,11 +149,48 @@ A collection of moments, memories and letters.
 <div class="card-date">Sept 14 2026</div>
 </a>
 
+<div id="sixth-letter-card" class="card locked-card">
+<div class="card-title">🔒 Sixth Monthsary</div>
+<div class="card-date">Opens October 14 2026</div>
+</div>
+
 <div class="footer">
 Made with love.
 </div>
 
 </div>
+
+<script>
+
+const releaseTime = new Date("2026-10-14T00:00:00+08:00").getTime();
+
+function checkLetterRelease(){
+
+const now = Date.now();
+const card = document.getElementById("sixth-letter-card");
+
+if(now >= releaseTime){
+
+card.classList.remove("locked-card");
+
+card.innerHTML = `
+<div class="card-title">💌 Sixth Monthsary</div>
+<div class="card-date">Oct 14 2026</div>
+`;
+
+card.onclick = function(){
+window.location.href = "sixth-monthsary.html";
+};
+
+}
+
+}
+
+checkLetterRelease();
+
+setInterval(checkLetterRelease, 1000);
+
+</script>
 
 </body>
 </html>
