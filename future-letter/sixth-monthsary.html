@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Open Letter</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html,
+body{
+background:#000;
+color:white;
+min-height:100%;
+font-family:'Playfair Display',sans-serif;
+overflow-x:hidden;
+}
+
+/* Envelope Screen */
+
+#envelope-screen{
+position:fixed;
+inset:0;
+background:#000;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+z-index:100;
+transition:1s;
+}
+
+.envelope{
+width:260px;
+height:170px;
+position:relative;
+cursor:pointer;
+transition:.4s;
+}
+
+.envelope:hover{
+transform:translateY(-8px);
+}
+
+.envelope-body{
+position:absolute;
+width:100%;
+height:100%;
+background:#111;
+border:1px solid #333;
+border-radius:8px;
+}
+
+.envelope-flap{
+position:absolute;
+top:0;
+left:0;
+width:0;
+height:0;
+border-left:130px solid transparent;
+border-right:130px solid transparent;
+border-top:90px solid #1d1d1d;
+transform-origin:top;
+}
+
+.open-text{
+margin-top:30px;
+opacity:.7;
+letter-spacing:2px;
+}
+
+/* Hidden Letter */
+
+#letter-page{
+opacity:0;
+pointer-events:none;
+transition:1s;
+padding:30px;
+}
+
+.letter{
+max-width:900px;
+margin:auto;
+background:#050505;
+border-radius:24px;
+padding:50px;
+border:1px solid #1a1a1a;
+box-shadow:0 0 30px rgba(255,255,255,.03);
+}
+
+.date{
+font-family:Georgia, "Times New Roman", serif;
+opacity:.5;
+margin-bottom:20px;
+text-align:rightr;
+}
+
+.title{
+font-family:Georgia, "Times New Roman", serif;
+font-size:20px;
+margin-bottom:10px;
+text-align:center;
+}
+
+.content{
+font-family:Georgia, "Times New Roman", serif;
+font-size:15px;
+font-style:italic;
+font-weight:500;
+line-height:1.8;
+white-space:pre-wrap;
+}
+
+.signature{
+margin-top:35px;
+text-align:right;
+font-family:Georgia, "Times New Roman", serif;
+font-size:13px;
+}
+
+.back{
+display:inline-block;
+margin-bottom:30px;
+color:white;
+text-decoration:none;
+opacity:.6;
+}
+
+.back:hover{
+opacity:1;
+}
+
+@media(max-width:700px){
+
+.letter{
+padding:25px;
+}
+
+.title{
+font-size:20px;
+}
+
+.content{
+font-size:15px;
+}
+
+.signature{
+font-size:13px;
+}
+
+.envelope{
+width:220px;
+height:145px;
+}
+
+.envelope-flap{
+border-left:110px solid transparent;
+border-right:110px solid transparent;
+border-top:75px solid #1d1d1d;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<!-- Envelope -->
+
+<div id="envelope-screen">
+
+<div class="envelope" onclick="openLetter()">
+
+<div class="envelope-body"></div>
+<div class="envelope-flap"></div>
+
+</div>
+
+<div class="open-text">
+A Letter For You My Love ❤︎
+</div>
+
+</div>
+
+<!-- Letter -->
+
+<div id="letter-page">
+
+<div class="letter">
+
+<a href="index.html" class="back">
+«« Back Home
+</a>
+
+<div class="date">
+Oct - 14 - 2026
+</div>
+
+<div class="title">
+Sixth Monthsary
+</div>
+
+<div class="content">
+To my beautiful wife, ❀ Angel Yves ❤︎
+
+My Dearest,
+
+Words worthy of bearing the gratitude I hold for the chance thou hast bestowed upon me are beyond my reach. No tongue, no parchment, nor any verse could ever be sufficient to convey what this gift meant to me. Therefore, I have chosen to show my gratitude through a promise:
+
+A promise to become better than the man I once was.
+A promise to continue learning thee, not merely for a season, but throughout the ages.
+A promise to lead thee toward a life freed from the burdens thou hast carried.
+And a promise to grow old whilst holding thy hand, until the very hour our final breaths depart from us.
+
+I may never be able to erase the mistakes I have committed, nor undo the wounds I have caused. Yet I shall fill thy heart with new memories, memories gentler and more beautiful than those before- until, in time, they may replace the things thou never deserved to endure.
+
+I believe fate did not sew our paths together merely so that we might experience what we had never known. I believe it brought us together for something far deeper.
+
+It was meant to awaken you, to let thee see that thou art a human being, not a tool for others to use whenever they have need of you or seek an experience through you.
+
+And through my devotion, my love, and my unwavering dedication to the commitment I have made to you, I wish to show thee that thou art worthy of love. Thou art worthy of being cherished. Thou art worthy of being treated with tenderness and respect.
+
+And perhaps fate sought to awaken me as well, to make me see that I was never as cold nor as heartless as I had convinced myself I was. That I was still capable of loving someone as deeply as I love you.
+
+I was merely protecting my heart from wounds and tragedies I had never asked for.
+
+Perhaps that is why fate allowed our paths to meet, so that we might open both mind and heart, and through one another, learn to grow together.
+
+To simply say, "I love you" would be far too facile.
+
+For I would worship the very ground upon which thy feet tread. I would kneel before the world for thy sake. I would gladly cleanse the dust from thy heels with my own hands. I would endure the pain of holding a rose barehanded if it meant proving the depth of what I feel for you.
+
+When thou art not beside me, thy absence is a silence that suffocates the soul.
+
+Each night, I shall whisper thy name unto the moon, that even when we are long gone from this world, it may still remember you.
+
+I shall meet thy eyes with warmth.
+I shall cherish thee through all the years that fate grant us.
+And I shall guard thy heart as though it were the most precious treasure entrusted to my keeping.
+
+I wish to become better— not merely for myself, but so that I may become the man thou needest.
+
+The man thou shalt run to when the world becomes unwieldy.
+The man beside whom thou may finally rest.
+The man thou deserves.
+The man thou hast always wished for.
+
+I shall strive to become better, so that I may give thee the finest life I am capable of giving, and so that the future we build together may be one filled with warmth, peace, and love.
+
+And yes… I am obsessed with you. I shall not deny it.
+
+But how could I not be?
+
+When thy eyes are like flowers upon which my gaze cannot help but linger.
+
+When thy face can brighten even the darkest day.
+
+When thy voice is the only melody capable of bringing peace to my restless heart.
+
+When thy presence alone keeps me tethered to this world.
+
+When thy heart is the warmth that keeps mine from growing cold.
+
+When thy name echoes within my mind without invitation.
+
+And when thou art the first thought that enter my mind whenever I witness or hear something sweet, beautiful, or lovely.
+
+✿Thou art the only woman my eyes shall seek.
+
+✿Thou art the only woman my mind shall think upon.
+
+✿Thou art the only woman my heart shall breathe for.
+
+✿For thou art the only woman with whom I wish to  
+    spend my life.
+
+No one else shall ever take thy place within my heart, my mind, or my soul.
+
+And should every language of this world be gathered together, should every poet exhaust every verse, and should every star in the heavens become ink upon the parchment..
+
+...Still, it would not be enough.
+
+For I love thee far beyond anything words could ever describe.
+
+Forever thineꨄ
+
+ᥫ᭡✿Happy 6th Monthsary My Wifeꨄ✿
+</div>
+
+<div class="signature">
+— ꨄ Your husband, Ace ꨄ
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function openLetter(){
+
+document.getElementById("envelope-screen").style.opacity="0";
+
+setTimeout(()=>{
+document.getElementById("envelope-screen").style.display="none";
+document.getElementById("letter-page").style.opacity="1";
+document.getElementById("letter-page").style.pointerEvents="auto";
+},800);
+
+}
+
+</script>
+
+</body>
+</html>
