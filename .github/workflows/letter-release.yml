@@ -1,0 +1,67 @@
+name: Our Little Space Letter Release
+
+on:
+  push:
+    branches:
+      - main
+
+  schedule:
+    - cron: "0 0 14 10 *"
+      timezone: "Asia/Manila"
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Prepare website
+        run: |
+          mkdir _site
+
+          rsync -av \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='future-letter' \
+            ./ _site/
+
+          RELEASE_TIME=$(TZ=Asia/Manila date -d "2026-10-14 00:00:00" +%s)
+          CURRENT_TIME=$(TZ=Asia/Manila date +%s)
+
+          if [ "$CURRENT_TIME" -ge "$RELEASE_TIME" ]; then
+            cp -R future-letter/. _site/
+          fi
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: "_site"
+
+  deploy:
+    needs: build
+
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
